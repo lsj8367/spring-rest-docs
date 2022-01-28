@@ -19,10 +19,12 @@ Content-Type: application/json;charset=UTF-8
 
 === Request HTTP Example
 
-include::{snippets}/hello/http-request.adoc[]
+include::{snippets}/index/http-request.adoc[]
 
 == Response
 
-=== Response HTTP Example
+=== Response HTTP Exampled
 
-include::{snippets}/hello/http-response.adoc[]
+include::{snippets}/index/http-response.adoc[]
+
+include::{snippets}/index/response-fields.adoc[]
