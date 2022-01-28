@@ -27,9 +27,6 @@ public class RestDocsDependencyImports {
         RestDocumentationContextProvider provider) {
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext)
             .apply(documentationConfiguration(provider).snippets())
-            .alwaysDo(
-                document("{method-name}", preprocessRequest(prettyPrint()),
-                    preprocessResponse(prettyPrint())))
             .build();
     }
 
