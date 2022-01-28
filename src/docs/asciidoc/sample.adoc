@@ -1,0 +1,28 @@
+ifndef::snippets[]
+:snippets: ../../../build/generated-snippets
+endif::[]
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:site-url: /build/asciidoc/html5/
+
+== Request
+
+=== Request URL
+....
+GET /user/{userId}
+Content-Type: application/json;charset=UTF-8
+....
+
+=== Request HTTP Example
+
+include::{snippets}/hello/http-request.adoc[]
+
+== Response
+
+=== Response HTTP Example
+
+include::{snippets}/hello/http-response.adoc[]
