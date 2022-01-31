@@ -1,5 +1,5 @@
 :snippets: ../../../build/generated-snippets
-:doctype: article
+:doctype: book
 :icons: font
 :source-highlighter: highlightjs
 :toc: left
