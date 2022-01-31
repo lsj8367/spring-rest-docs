@@ -11,18 +11,22 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import io.github.lsj8367.RestDocsDependencyImports;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.restdocs.payload.JsonFieldType;
 
+@WebMvcTest(HomeController.class)
 class HomeControllerTest extends RestDocsDependencyImports {
 
     @Test
     void hello() throws Exception {
         mockMvc.perform(get("/"))
             .andExpect(status().isOk())
-            .andDo(document("index",
-                preprocessRequest(prettyPrint()),
-                preprocessResponse(prettyPrint()),
-                responseFields(
-                    fieldWithPath("key").type(JsonFieldType.STRING).description("키 값"))));
+            .andDo(
+                document("{method-name}", getRequestPreprocessor(), getResponsePreprocessor(),
+                    responseFields(
+                        fieldWithPath("key").type(JsonFieldType.STRING).description("키 값"))
+                )
+            );
     }
+
 }
